@@ -27,3 +27,9 @@ services:
       - "../front/:/app"
     ports:
       - "80:80"
+  redis:
+    image: redis:5
+    hostname: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - 6379:6379
