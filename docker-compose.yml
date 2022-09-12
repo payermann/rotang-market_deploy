@@ -20,6 +20,8 @@ services:
       - POSTGRES_USER=${SQL_USER}
       - POSTGRES_PASSWORD=${SQL_PASSWORD}
       - POSTGRES_DB=${SQL_DATABASE}
+    ports:
+      - "5432:5432"
   frontend:
     container_name: front
     build: ../front/
